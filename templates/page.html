@@ -4,16 +4,8 @@
 {% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
 
 {% block header %}
-<header class="space">
-  <a class="title" href= {{ config.base_url }}><h1>{{ config.title }}</h1></a>
-  
-
-  {% set blog = get_section(path="blog/_index.md") %}
-    <a class="backlink" href="{{ blog.permalink }}">&LeftArrow; Posts</a>
-</header>
+  {% include "parts/header.html" %}
 {% endblock header %}
-
-
 
 {% block content %}
 <main class="content">

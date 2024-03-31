@@ -1,26 +1,24 @@
 {% extends "index.html" %}
 
-{% block header %}
-<header class="space">
-  <a class="title" href= {{ config.base_url }}><h1>{{ config.title }}</h1></a>
-  
+{% block title %}{{ config.title }} | Tag list {% endblock title %}
 
-  {% set blog = get_section(path="blog/_index.md") %}
-    <a class="backlink" href="{{ blog.permalink }}">&LeftArrow; Posts</a>
-</header>
+{% block header %}
+{% include "parts/header.html" %}
 {% endblock header %}
 
 {% block content %}
 <div class="content">
     <h1>Tags</h1>
 	{% for term in terms -%}
-	<section class="tags-item" id="{{ term.name }}">
-		<h2 class="tags-item-label"><a href="{{ term.permalink | safe }}">#{{ term.name }}</a></h2>
+	<section class="" id="{{ term.name }}">
+		<h2 class="tag-link"><a class="secondary" href="{{ term.permalink | safe }}">#{{ term.name }}</a></h2>
         <ul>
 		{% for page in term.pages -%}
-		<a class="tags-post" href="{{ page.permalink | safe }}">
-			<li class="tags-post-title">{{ page.title | truncate(length=30) }}</li>
-		</a>
+        <li class="">
+            <a class="tags-post" href="{{ page.permalink | safe }}">
+                {{ page.title | truncate(length=30) }}
+            </a>
+        </li>
         <span class="tags-post-meta">
 			<time datetime="{{ page.date }}">
 				{{ page.date | date(format=config.extra.timeformat | default(value="%Y-%m-%-d")) }}

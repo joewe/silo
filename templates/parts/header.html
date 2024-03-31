@@ -1,0 +1,16 @@
+<header class="">
+    <a class="title" href= {{ config.base_url }}><h1>{{ config.title }}</h1></a>
+    
+    {% if config.extra.links %}
+    <nav class="header-links">
+      <ul>
+        {% set blog = get_section(path="blog/_index.md") %}
+        <li><a href="{{ blog.permalink }}">Posts</a></li>
+
+        {% for link in config.extra.links %}
+        <li><a href="{{ link.href }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+  </header> 

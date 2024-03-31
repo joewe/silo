@@ -37,8 +37,22 @@ body{
                 margin-bottom: 0.5rem;
                 border-radius: 4px;
             }
+            .tag-link{
+                font-size: 1.05rem;
+            }
             hr{
                 margin-top: 3rem;
+            }
+            ul{
+                padding: 0;
+            }
+            li{
+                list-style: none;
+                padding: 0;
+            }
+            li:before{
+                content: "\070D";
+                margin: 0 1rem;
             }
         }
         .footer{
