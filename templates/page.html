@@ -19,7 +19,7 @@
 <main class="content">
     <h1>{{ page.title }}</h1>
     {% if page.date %}
-    <p class="meta">{{ page.date | date(format="%-d %B, %Y") }}</p>
+    <p class="meta">{{ page.date | date(format="%Y-%m-%d") }}</p>
     {% endif %}
     <div class="inner">
       {{ page.content | safe }}

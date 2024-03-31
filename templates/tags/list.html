@@ -23,7 +23,7 @@
 		</a>
         <span class="tags-post-meta">
 			<time datetime="{{ page.date }}">
-				{{ page.date | date(format=config.extra.timeformat | default(value="%B %e, %Y")) }}
+				{{ page.date | date(format=config.extra.timeformat | default(value="%Y-%m-%-d")) }}
 			</time>
 		</span>
 		{% endfor -%}
