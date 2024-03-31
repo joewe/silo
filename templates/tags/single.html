@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% block header %}
+<header class="space">
+  <a class="title" href= {{ config.base_url }}><h1>{{ config.title }}</h1></a>
+  
+
+  {% set blog = get_section(path="blog/_index.md") %}
+    <a class="backlink" href="{{ blog.permalink }}">&LeftArrow; Posts</a>
+</header>
+{% endblock header %}
+
+{% block content %}
+<div class="content">
+    <h2 class="tags-header-title">Posts about #{{ term.name }}</h2>
+    <ul>
+        {% for page in term.pages -%}
+        <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+        {%- endfor %}
+    </ul>
+</div>
+{% endblock content %}

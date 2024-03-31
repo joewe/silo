@@ -1,0 +1,7 @@
++++
+title = "About"
+
+extra.in_header = true 
++++
+
+Hook is a theme for Zola, a static site generator.
