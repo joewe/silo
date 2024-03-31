@@ -7,12 +7,17 @@
     <h1>{{ section.title }}</h1>
     {% if section.pages %}
     {% for year, posts in section.pages | group_by(attribute="year") %}
+    <div class="list-section" id="{{ year }}"></div>
     <h2 class="year">{{ year }}</h2>
-    <ul>
         {% for post in posts %}
-        <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+            <div class="cell">
+                <span class="post-title"><a class="tags-post" href="{{ post.permalink | safe }}">
+                    {{ post.title | truncate(length=30) }}
+                </a> </span>
+                <div class="line"></div>
+                <span class="post-date">{{ post.date | date(format=config.extra.timeformat | default(value="%Y-%m-%-d")) }}</span>
+            </div>
         {% endfor %}
-    </ul>
     {% endfor %}
     {% else %}
     <p>No posts yet.</p>

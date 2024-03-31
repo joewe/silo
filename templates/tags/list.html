@@ -10,23 +10,18 @@
 <div class="content">
     <h1>Tags</h1>
 	{% for term in terms -%}
-	<section class="" id="{{ term.name }}">
+	<div class="list-section" id="{{ term.name }}">
 		<h2 class="tag-link"><a class="secondary" href="{{ term.permalink | safe }}">#{{ term.name }}</a></h2>
-        <ul>
 		{% for page in term.pages -%}
-        <li class="">
-            <a class="tags-post" href="{{ page.permalink | safe }}">
+        <div class="cell">
+            <span class="post-title"><a class="tags-post" href="{{ page.permalink | safe }}">
                 {{ page.title | truncate(length=30) }}
-            </a>
-        </li>
-        <span class="tags-post-meta">
-			<time datetime="{{ page.date }}">
-				{{ page.date | date(format=config.extra.timeformat | default(value="%Y-%m-%-d")) }}
-			</time>
-		</span>
+            </a> </span>
+            <div class="line"></div>
+            <span class="post-date">{{ page.date | date(format=config.extra.timeformat | default(value="%Y-%m-%-d")) }}</span>
+        </div>
 		{% endfor -%}
-    </ul>
-	</section>
+	</div>
 	{% endfor -%}
 </div>
 {% endblock content %}

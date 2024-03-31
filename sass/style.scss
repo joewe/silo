@@ -36,10 +36,42 @@ body{
                 margin-top: 0.5rem;
                 margin-bottom: 0.5rem;
                 border-radius: 4px;
-            }
+            }            
             .tag-link{
                 font-size: 1.05rem;
             }
+            .list-section{
+                margin-bottom: 2rem;
+            }
+            .cell{
+                display: flex;
+                flex-direction: row;
+                align-items: first baseline;
+                border-radius: 8px;
+                transition: transform 0.1s ease;
+                gap: 0.4rem;
+                padding: 6px 0px;
+                .post-title{
+                    flex-grow: 0;
+                    max-width: fit-content;
+                    flex-basis: auto;
+                    color: var(--tx);
+                }
+                .line{
+                    min-width: 2rem;
+                    flex-grow: 1;
+                    border-bottom: 1px dotted #ccc;
+                    height: 2px;
+                    margin: 0px 8px;
+                }
+                .post-date{
+                    flex-shrink: 1;
+                    color: var(--tx-3);
+                    font-size: 0.7rem;
+                }
+
+            }
+
             hr{
                 margin-top: 3rem;
             }
@@ -51,7 +83,7 @@ body{
                 padding: 0;
             }
             li:before{
-                content: "\070D";
+                content: "\083E";
                 margin: 0 1rem;
             }
         }

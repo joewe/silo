@@ -9,10 +9,16 @@
 {% block content %}
 <div class="content">
     <h2 class="tags-header-title">Posts about #{{ term.name }}</h2>
-    <ul>
+    
         {% for page in term.pages -%}
-        <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+        <div class="cell">
+            <span class="post-title"><a class="tags-post" href="{{ page.permalink | safe }}">
+                {{ page.title | truncate(length=30) }}
+            </a> </span>
+            <div class="line"></div>
+            <span class="post-date">{{ page.date | date(format=config.extra.timeformat | default(value="%Y-%m-%-d")) }}</span>
+        </div>
         {%- endfor %}
-    </ul>
+    
 </div>
 {% endblock content %}
