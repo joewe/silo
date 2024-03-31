@@ -16,13 +16,24 @@
     <div class="inner">
       {{ page.content | safe }}
     </div>
-    <hr>
-    <section class="meta">
+    
+    <div class="tags">
       {% if page.taxonomies.tags %}
         {% for tag in page.taxonomies.tags %}
-          #<a href="/tags/{{ tag | slugify }}">{{ tag }}</a>
+          <span class="tag"><a href="/tags/{{ tag | slugify }}">{{ tag }}</a></span>
         {% endfor %}
       {% endif %}
-    </section>
+    </div>
+  <hr>
+    <div class="pagination">
+      {% if page.higher -%}
+      <a href="{{ page.higher.permalink | safe }}" class="left-arrow">&#x219C; {{ page.higher.title | safe }}</a>
+      {%- endif %}
+      
+      {% if page.lower -%}
+      <a href="{{ page.lower.permalink | safe }}" class="right-arrow">{{ page.lower.title | safe }} &#x219D;</a>
+      {%- endif %}
+    </div>
+
 </main>
 {% endblock content %}

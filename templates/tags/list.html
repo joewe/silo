@@ -11,7 +11,7 @@
     <h1>Tags</h1>
 	{% for term in terms -%}
 	<div class="list-section" id="{{ term.name }}">
-		<h2 class="tag-link"><a class="secondary" href="{{ term.permalink | safe }}">#{{ term.name }}</a></h2>
+		<h2 class="tag-link"><a href="{{ term.permalink | safe }}">{{ term.name }}</a></h2>
 		{% for page in term.pages -%}
         <div class="cell">
             <span class="post-title"><a class="tags-post" href="{{ page.permalink | safe }}">
