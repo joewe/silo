@@ -4,7 +4,7 @@ Silo is a minimal [Zola](https://www.getzola.org/) theme that I made for my pers
 
 ### Screenshots
 
-<img alt="Website Screenshot" src="screenshot.png" width="720px" />
+<img alt="Website Screenshot" src="screenshot.png"  />
 
 ### Quick Start
 
