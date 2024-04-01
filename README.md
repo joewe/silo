@@ -9,7 +9,7 @@ Silo is a minimal [Zola](https://www.getzola.org/) theme that I made for my pers
 ### Quick Start
 
 ```bash
-# clone the repo
+# clone the repo in the theme folder
 git clone https://github.com/joewe/silo.git
 # change directory into the cloned folder
 cd silo
