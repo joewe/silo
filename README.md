@@ -1,6 +1,6 @@
 # Silo
 
-Silo is a minimal [Zola](https://www.getzola.org/) theme that  made for my personal site.
+Silo is a minimal [Zola](https://www.getzola.org/) theme that I made for my personal site.
 
 ### Screenshots
 
