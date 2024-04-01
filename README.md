@@ -2,7 +2,7 @@
 
 Silo is a minimal [Zola](https://www.getzola.org/) theme that I made for my personal site, based on [Hook](https://github.com/InputUsername/zola-hook)
 
-### Screenshots
+### Screenshot
 
 <img alt="Website Screenshot" src="screenshot.png"  />
 
