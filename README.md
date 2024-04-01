@@ -10,7 +10,7 @@ Silo is a minimal [Zola](https://www.getzola.org/) theme that I made for my pers
 
 ```bash
 # clone the repo
-git clone git@github.com:joewe/silo.git
+git clone https://github.com/joewe/silo.git
 # change directory into the cloned folder
 cd silo
 # serve the site locally
