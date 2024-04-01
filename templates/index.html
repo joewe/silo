@@ -35,7 +35,6 @@
         <ul class="post-list">
             {% for post in blog.pages | slice(end=20) %}
             <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
-
             {% endfor %}
         </ul>
         {% endif %}
@@ -43,7 +42,7 @@
     {% endif %}
     {% endblock content %}
   <div class="footer meta">
-    &copy;2024~ JW
+    &copy;2024
   </div>
   </div>
 </body>

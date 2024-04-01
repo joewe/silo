@@ -1,6 +1,5 @@
 +++
 title = "home"
 +++
-# Etwas gutes hier:
-- erster Eintrag
-- zweiter eintrag
+# Overview
+Made this theme for my personal blog. Feel free to customize it.
