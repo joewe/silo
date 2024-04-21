@@ -5,83 +5,145 @@ $h-font: "Arvo", serif;
 
 $faint-parts: 75%;
 
+$linkColor: #264653;
 
-body{
+$linkColorHover: #264653;
+
+body {
+
     font-size: 85%;
     font-family: $body-font;
 
-   .container{
+    a {
+        color: $linkColor;
+        text-decoration-color: #00619562;
+
+    }
+
+    a:hover {
+        color: $linkColorHover;
+        text-decoration-color: #e66f51;
+    }
+
+    .container {
         margin: auto;
         margin-top: 2rem;
         width: 600px;
 
-        h1, h2, h3, h4, h5, h6{
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: $h-font;
             font-weight: 400;
         }
-        h1{font-size: 1.4rem;}
-        h2{font-size: 1.3rem;}
-        h3{font-size: 1.2rem;}
-        h4{font-size: 1.10rem;}
-        h5{font-size: 1.05rem;}
-        h6{font-size: 1rem;}
+
+        h1 {
+            font-size: 1.4rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        h4 {
+            font-size: 1.10rem;
+        }
+
+        h5 {
+            font-size: 1.05rem;
+        }
+
+        h6 {
+            font-size: 1rem;
+        }
 
         .title {
             text-decoration: none;
-        }        
-        .meta{
+        }
+
+        .meta {
             opacity: 75%;
             font-size: 85%;
         }
-        .content{
+
+        .content {
             margin-top: 3rem;
-            .year{
+
+            .info {
+                margin-bottom: 4rem;
+            }
+
+            .recent-post-list {
+                margin-bottom: 2rem;
+            }
+
+            .year {
                 opacity: $faint-parts;
                 font-size: 1.10rem;
             }
-            .inner img{
+
+            .inner img {
                 margin-top: 0.5rem;
                 margin-bottom: 0.5rem;
                 border-radius: 4px;
             }
-            .tags{
+
+            .tags {
                 margin-top: 2rem;
-                .tag{
+
+                .tag {
                     background-color: #f3f3f3;
                     border-radius: 8px;
                     padding: 5px 8px;
                     font-size: 0.75rem;
-                    a{
+
+                    a {
                         text-decoration: none;
                         color: #444;
                         opacity: $faint-parts;
                     }
-                    a:hover{
+
+                    a:hover {
                         opacity: 1;
                     }
                 }
-            }           
-            .tag-link{ // list view
+            }
+
+            .tag-link {
+                // list view
                 font-size: 1.05rem;
-                a{
-                    padding: 5px 8px;    
+
+                a {
+                    padding: 5px 8px;
                     background-color: #f3f3f3;
                     border-radius: 8px;
                     text-decoration: none;
                     color: #444;
                     opacity: $faint-parts;
                 }
-                a:hover{
+
+                a:hover {
                     opacity: 1;
                 }
             }
-            .tag-selected{ // single view
+
+            .tag-selected {
+                // single view
                 opacity: $faint-parts;
             }
-            .list-section{
+
+            .list-section {
                 margin-bottom: 2rem;
             }
-            .cell{
+
+            .cell {
                 display: flex;
                 flex-direction: row;
                 align-items: first baseline;
@@ -89,20 +151,23 @@ body{
                 transition: transform 0.1s ease;
                 gap: 0.4rem;
                 padding: 6px 0px;
-                .post-title{
+
+                .post-title {
                     flex-grow: 0;
                     max-width: fit-content;
                     flex-basis: auto;
                     color: var(--tx);
                 }
-                .line{
+
+                .line {
                     min-width: 2rem;
                     flex-grow: 1;
                     border-bottom: 1px dotted #ccc;
                     height: 2px;
                     margin: 0px 8px;
                 }
-                .post-date{
+
+                .post-date {
                     flex-shrink: 1;
                     color: var(--tx-3);
                     font-size: 0.7rem;
@@ -110,52 +175,72 @@ body{
 
             }
 
-            hr{
+            hr {
                 margin-top: 3rem;
             }
-            ul{
+
+            ul {
                 padding: 0;
             }
-            li{
+
+            li {
                 list-style: none;
                 padding: 0;
             }
-            li:before{
+
+            li:before {
                 content: "\083E";
                 margin: 0 1rem;
             }
-            .pagination{
+
+            .pagination {
                 margin-top: 2rem;
                 display: flex;
                 justify-content: space-between;
                 align-items: stretch;
                 text-align: center;
                 gap: 1rem;
-                a{
+
+                a {
                     text-decoration: none;
                     color: #444;
                     opacity: $faint-parts;
                     padding: 5px 8px;
                 }
-                a:hover{
+
+                a:hover {
                     opacity: 1;
                     background-color: #f3f3f3;
                     border-radius: 8px;
                     padding: 5px 8px;
                 }
-                a .left-arrow{
+
+                a .left-arrow {
                     text-align: left;
                 }
-                a .right.arrow{
+
+                a .right.arrow {
                     text-align: right;
                 }
             }
         }
-        .footer{
+
+        .footer {
             margin-top: 5rem;
             margin-bottom: 2rem;
+
+            .copy {
+                text-align: left;
+            }
+
+            .foo-link {
+                float: right;
+
+                a {
+                    color: #444;
+                    text-decoration: none;
+                }
+            }
         }
-    } 
+    }
 }
-
-

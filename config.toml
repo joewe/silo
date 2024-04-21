@@ -1,9 +1,9 @@
 # The URL the site will be built for
-base_url = "https://your.url"
+base_url = "https://joewe.dev"
 theme = "silo"
 
-title = "Silo"
-description = "some description"
+title = "Joe Weber"
+description = "Thoughts about code, technology and everything in between."
 
 generate_feed = true
 compile_sass = true
@@ -25,4 +25,5 @@ highlight_theme = "agola-dark"
 
 links = [
     { title = "About", href = "/about" },
-    { title = "GitHub", href = "https://github.com/yourname" },
+    { title = "GitHub", href = "https://github.com/joewe" },
+]

@@ -1,5 +1,5 @@
 +++
 title = "Posts" 
 description = "This an overview of all posts" 
-sort_by = "date" 
+sort_by = "date"
 +++
