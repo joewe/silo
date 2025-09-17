@@ -1,8 +1,8 @@
 # The URL the site will be built for
-base_url = "https://joewe.dev"
+base_url = "https://joerg.fyi"
 theme = "silo"
 
-title = "Joe Weber"
+title = "Joerg.fyi"
 description = "Thoughts about code, technology and everything in between."
 
 generate_feed = true

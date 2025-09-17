@@ -15,7 +15,7 @@
                     {{ post.title | truncate(length=30) }}
                 </a> </span>
                 <div class="line"></div>
-                <span class="post-date">{{ post.date | date(format=config.extra.timeformat | default(value="%Y-%m-%-d")) }}</span>
+                <span class="post-date">{{ post.date | date(format=config.extra.timeformat | default(value="%Y-%m-%d")) }}</span>
             </div>
         {% endfor %}
     {% endfor %}

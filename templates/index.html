@@ -10,11 +10,9 @@
   {% block extra_head %}
   <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
   {% endblock extra_head %}
-  {% block feed_link %}
-  {% if config.generate_feed %}
-  <link rel="alternate" type="application/atom+xml" title="Feed"
-    href="{{ get_url(path=config.feed_filename, trailing_slash=false) }}">
-  {% endif %}
+
+  {% block rss %}
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
   {% endblock %}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
 </head>
@@ -50,7 +48,7 @@
     {% endif %}
     {% endblock content %}
     <div class="footer meta">
-      <span class="copy">&copy;2024</span> <span class="foo-link"><a href="/atom.xml">RSS feed</a></span>
+      <span class="copy">&copy;2025</span> <span class="foo-link"><a href="/atom.xml">RSS feed</a></span>
     </div>
   </div>
 </body>
