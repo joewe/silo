@@ -3,17 +3,20 @@
 $body-font: "Rubik", sans-serif;
 $h-font: "Rubik", serif;
 
+$content_width: 650px;
+
 $faint-parts: 75%;
 
-$linkColor: #264653;
+$linkColor: #284159;
 
-$linkColorHover: #264653;
+$linkColorHover: #593ea4;
+$linkColorHoverDeco: #fd5b33;
 
 body {
 
     font-size: 85%;
     font-family: $body-font;
-
+    color: black;
     a {
         color: $linkColor;
         text-decoration-color: #00619562;
@@ -22,13 +25,13 @@ body {
 
     a:hover {
         color: $linkColorHover;
-        text-decoration-color: #e66f51;
+        text-decoration-color: $linkColorHoverDeco;
     }
 
     .container {
         margin: auto;
         margin-top: 2rem;
-        width: 600px;
+        width: $content_width;
 
         h1,
         h2,
@@ -71,6 +74,10 @@ body {
         .meta {
             opacity: 75%;
             font-size: 85%;
+        }
+
+        .header-links{
+            font-size: 1.05rem;
         }
 
         .content {
